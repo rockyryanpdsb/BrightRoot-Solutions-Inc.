@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BrightRoot Solutions Inc. - Home</title>
+<style>
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #e3eaf3 0%, #f0f4f8 100%);
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #2142b8 80%, #0077b6 100%);
+  color: white;
+  padding: 56px 20px 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: "";
+  position: absolute;
+  right: 40px; top: 20px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, #00b8d9 50%, transparent 70%);
+  opacity: 0.18;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatAccent 4s infinite alternate;
+}
+@keyframes floatAccent {
+  from { transform: translateY(0);}
+  to { transform: translateY(20px);}
+}
+header h1 {
+  margin: 0 0 10px;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 2px 16px #0077b644;
+  position: relative;
+  z-index: 2;
+}
+header p {
+  font-size: 1.3rem;
+  opacity: 0.92;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: 2;
+  position: relative;
+}
+
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+  padding: 18px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #2142b8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.13em;
+  padding: 10px 22px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px transparent;
+  position: relative;
+  z-index: 2;
+}
+nav a:hover, nav a.active {
+  background: linear-gradient(90deg, #00b8d9 60%, #0077b6 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px #00b8d944;
+  text-decoration: underline;
+  transform: scale(1.07);
+}
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+  padding: 36px;
+  margin-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: -30px; left: -30px;
+  width: 90px; height: 90px;
+  background: radial-gradient(circle, #00b8d9 40%, transparent 70%);
+  opacity: 0.13;
+  z-index: 0;
+  border-radius: 50%;
+  animation: floatAccent 5s infinite alternate;
+}
+section::after {
+  content: "";
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 90px; height: 90px;
+  background: radial-gradient(circle, #0077b6 40%, transparent 70%);
+  opacity: 0.13;
+  z-index: 0;
+  border-radius: 50%;
+  animation: floatAccent 6s infinite alternate-reverse;
+}
+
+h2 {
+  color: #023047;
+  border-bottom: 3px solid #0077b6;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-shadow: 0 2px 12px #0077b644;
+  position: relative;
+  z-index: 2;
+}
+
+p.lead {
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+
+ul.features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+ul.features li {
+  background: #e0f0ff;
+  padding: 24px;
+  border-radius: 14px;
+  flex: 1 1 280px;
+  font-weight: 600;
+  color: #0077b6;
+  box-shadow: 0 4px 18px rgba(0,119,182,0.15);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+ul.features li:hover {
+  box-shadow: 0 8px 32px rgba(0,119,182,0.22);
+  transform: scale(1.04);
+}
+
+footer {
+  background: #002b36;
+  color: #ccc;
+  text-align: center;
+  padding: 24px 10px;
+  font-size: 1rem;
+  margin-top: 50px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+}
+
+.why {
+  text-align: center;
+  margin: 40px 0 16px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2142b8;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #2142b844;
+}
+
+p {
+  text-align: center;
+}
+
+nav.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.container {
+  text-align: center;
+  margin: 0;
+  max-width: 215px;
+  font-size: 1.2rem;
+  background: rgba(136,136,136,0.85);
+  border-radius: 24px;
+  padding: 18px 0;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(136,136,136,0.18);
+  backdrop-filter: blur(2px);
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+  border: 1px solid #e3eaf3;
+  font-weight: 600;
+}
+.container:hover {
+  box-shadow: 0 8px 32px rgba(136,136,136,0.22);
+  transform: scale(1.04);
+  background: rgba(80,80,80,0.92);
+}
+
+@media(max-width: 700px){
+  nav, nav.nav {
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 0.98em;
+  }
+  ul.features {
+    flex-direction: column;
+  }
+  .container {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  header {
+    padding: 24px 10px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+  footer {
+    padding: 12px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+
+<nav>
+ <a href="index.html" class="active">Home</a>
+ <a href="about.html">About</a>
+ <a href="services.html">Services</a>
+ <a href="team.html">Team</a>
+ <a href="contact.html">Contact</a>
+</nav>
+
+
+
+
+<header>
+ <h1>Innovating the Future with BrightRoot </h1>
+ <p>Your trusted partner for comprehensive IT solutions, from custom</p>
+ <p>development to enterprise networking. We transform ideas into powerful</p>
+ <p>digital experiences.</p>
+</header>
+<h1></h1>
+<h1 class="why">Why Choose BrightRoot?</h1>
+<p>We deliver cutting-edge technology solutions that drive business growth and</p>
+<p>digital transformation.</p>
+
+<nav class="nav">
+<div class="container"> <h4>custom development</h4> </div> 
+<div class="container"> <h4>ai genaration</h4> </div>
+<div class="container"> <h4>Cybersecurity Solutions</h4> </div>
+<div class="container"> <h4>Enterprise Networking</h4> </div>
+</nav>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1>Join BrightRoot so we could make something awsome together</h1>
+
+
+
+
+
+
+<footer>
+ &copy; 2025 BrightRoot Solutions Inc.
+</footer>
+
+
+</body>
+<script src="javascript/script.js"></script>
+</html>
